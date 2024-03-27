@@ -1,0 +1,24 @@
+<div class="grid">
+	<div class="col-12">
+		<div class="card">
+            <p-table [value]="Potions" [tableStyle]="{ 'min-width': '50rem' }">
+                <ng-template pTemplate="header">
+                    <tr>
+                        <th>Id</th>
+                        <th>Name</th>
+                        <th>Description</th>
+                    </tr>
+                </ng-template>
+                <ng-template pTemplate="body" let-potion>
+                    <tr>
+                        <td>{{ potion.id }}</td>
+                        <td>{{ potion.name }}</td>
+                        <td>{{ potion.description }}</td>
+                    </tr>
+                </ng-template>
+            </p-table>
+		</div>
+
+	</div>
+</div>
+
