@@ -42,7 +42,26 @@ It's important to note that scripts are executed based on the package.json file 
 You can technically install and run the applications separately, which may be useful if team members are working on different pieces of the application. If you only want to run the front end application, you can:
 ```cd C:\Hackathon\Source\repos\magical-library\client``` and then ```npm start```
 
-# Languages / Frameworks
+# Quick Start Guide
+### Client application
+Angular uses Components to render HTML/CSS to the browser. Inside the /client/src/app/demo/components folder you'll find MANY examples you can follow. Components must be registered in the /client/src/app/app.module.ts file and a route defined in the /client/src/app/app-routing.module.ts
+
+It would be a good idea to Control+Shift+F (Search all files) for 'PotionsComponent'. This will show you all of the files a Component must be defined in and how it is defined. Moreover, it's better to understand how Angular works with Components in general, so it's good to see the Angular docs below.
+
+* `/client/src/app/demo/components/potions/potions-routing.module.ts` - This is the routing file for /potions,  you can define additional routes here such as /potions/latest if you wanted a page that shows the latest potions
+* `/client/src/app/demo/components/potions/potions.module.ts` - This file specifies what modules need to be loaded to correctly render this page
+* `/client/src/app/demo/components/potions/potions.component.ts` - This is the typescript file that is essentially a controller for the view file (.html). You can define variables, methods, or services here. In this file by default, we load up a service and fetch a list of potions from it. Those potions are then put into an array that is rendered via the .html page
+* `/client/src/app/demo/components/potions/potions.component.html` - This file is the html file that is tightly associate with the `potions.component.ts` file. It can reference variables and methods defined by the component. It is also the file that would reference the PrimeNG UI components as needed
+
+### Server application
+ExpressJS is a lightweight server-side application. In our project, we simply define two API request and responses to use as examples. You can use this to build out additional APIs.
+
+* `/server/server.ts` - This is the typescript file that runs the server. It will create an express instance, start listening on port 3001 and register two APIs (/api/ping and /api/potions). These APIs just hardcode a response, where ideally you could connect to a database and return results from the database
+* `/server/routes/` - This folder you could define routes beyond the `server.ts` file
+* `/server/models/` - This folder defines Typescript interfaces that represent models/objects
+* `/server/models/potion.ts` - This is an example interface called Potion that defines a few properties
+
+# Documentation for Languages / Frameworks
 The /client folder of this repository was cloned from the Sakai / PrimeNG template project. It is based on AngularJS frontend framework leveraging the PrimeNG UI Framework.
 
 You may want to review the following documentation:
