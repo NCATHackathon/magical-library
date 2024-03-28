@@ -1,6 +1,37 @@
 # NC A&T Hackathon 2024
 Welcome students of the 2024 NC A&T Hackathon. This repository has been setup as an optional kickstarter for you to leverage if you wish. This repository is considered optional, however, it does include popular frameworks such as AngularJS, PrimeNG and Express. Using this starter template ideally would get you well underway with the Hackathon so you can focus on learning and implementing Views, Services and other foundational elements for a frontend web application.
 
+# Table of Contents
+ - [Problem Statement](#item-one)
+ - [Environment Setup](#item-two)
+ - [Quick Start Guide](#item-three)
+ - [Documentation](#item-four)
+
+<a id="item-one"></a>
+
+# Problem Statement
+**Greetings, esteemed witches, wizards and magical beings!**
+
+In an era where magic intertwines with the digital realm, the venerable Hogwarts Library of Spells, Potions, and Scrolls seeks to embark on a transformative journey. Our ancient library, a treasure trove of arcane knowledge and mystical artifacts, is ready to leap into the future. We invite you to partake in an enchanting challenge: to weave your magic and tech prowess to modernize how our magical community accesses and reserves our vast collection.
+
+### The Challenge
+Envision a world where the flick of a wand or a simple incantation enables you to reserve a spell, potion, or scroll from the comfort of your common room.
+
+Your task is to create a spellbinding digital platform that allows our students and faculty to seamlessly interact with the library's collection. This platform must not only captivate the user with its magical user experience but also be robust, secure, and efficient, leveraging a set of APIs that interact with an enchanted database to conjure information, perform searches, and secure reservations.
+
+### Key Objectives
+* **Magical User Experience**: Design an interface that reflects the wonder of Hogwarts, intuitive enough for even those who are more comfortable with quills than keyboards. It should capture the essence of our magical world, ensuring that users can navigate spell books, potion recipes, and ancient scrolls with ease.
+
+* **Spellbinding APIs**: Develop a suite of APIs that serve as the hidden passageways connecting the front-end to the mystical database. These APIs should handle various tasks, including searching for artifacts, checking availability, reserving items, and even suggesting related magical materials.
+
+* **Enchanted Database**: Craft a database that not only stores information but is also imbued with magic to organize, retrieve, and secure the library's sacred knowledge efficiently.
+
+While it is not expected that you complete an end to end, magical solution that works you can pick one or two key objectives that resonate with you as a witch/wizard of technology. Any team that completes all three would be like winning the Triwizard Cup.
+
+Your solutions will be judged on creativity, technical innovation, user experience, and how well they capture the essence of the magical world of Hogwarts.
+
+<a id="item-two"></a>
+
 # Environment Setup
 ### Downloads & Installations
 In order to successfully launch these applications, you'll need to insure the following apps are installed:
@@ -42,6 +73,8 @@ It's important to note that scripts are executed based on the package.json file 
 You can technically install and run the applications separately, which may be useful if team members are working on different pieces of the application. If you only want to run the front end application, you can:
 ```cd C:\Hackathon\Source\repos\magical-library\client``` and then ```npm start```
 
+<a id="item-three"></a>
+
 # Quick Start Guide
 ### Client application
 Angular uses Components to render HTML/CSS to the browser. Inside the /client/src/app/demo/components folder you'll find MANY examples you can follow. Components must be registered in the /client/src/app/app.module.ts file and a route defined in the /client/src/app/app-routing.module.ts
@@ -60,6 +93,8 @@ ExpressJS is a lightweight server-side application. In our project, we simply de
 * `/server/routes/` - This folder you could define routes beyond the `server.ts` file
 * `/server/models/` - This folder defines Typescript interfaces that represent models/objects
 * `/server/models/potion.ts` - This is an example interface called Potion that defines a few properties
+
+<a id="item-four"></a>
 
 # Documentation for Languages / Frameworks
 The /client folder of this repository was cloned from the Sakai / PrimeNG template project. It is based on AngularJS frontend framework leveraging the PrimeNG UI Framework.
