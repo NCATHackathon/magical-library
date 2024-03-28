@@ -1,22 +1,57 @@
 # NC A&T Hackathon 2024
 Welcome students of the 2024 NC A&T Hackathon. This repository has been setup as an optional kickstarter for you to leverage if you wish. This repository is considered optional, however, it does include popular frameworks such as AngularJS, PrimeNG and Express. Using this starter template ideally would get you well underway with the Hackathon so you can focus on learning and implementing Views, Services and other foundational elements for a frontend web application.
 
-# Sakai
+# Environment Setup
+### Downloads & Installations
+In order to successfully launch these applications, you'll need to insure the following apps are installed:
+* [NodeJS](https://nodejs.org/en/download/current) - NodeJS is a free, open-source, cross-platform JavaScript runtime environment that lets developers create servers, web apps, command line tools and scripts.
+* [Visual Studio Code](https://code.visualstudio.com/download) - Visual Studio Code is a free, open-source, cross-platform Code editor that allows you to develop in many languages (including JavaScript/NodeJS/Angular/etc).
+* [Git](https://git-scm.com/downloads) - Git is a free, open-source, cross-platform source code management (SCM). Git is used to version control your source code.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.0.4.
+### Project Setup
+If you already have general experience with Git, NodeJS, Visual Studio Code, etc, you can skip this section and see the TLDR:Project Setup section
 
-## Development server
+1. Ensure you've downloaded NodeJS, Visual Studio Code (VSCode) and Git
+2. Create a new folder to hold your repositories, you can create this folder anywhere you'd like. For example: ```C:\Hackathon\Source\repos```
+3. Now open a command prompt, or git bash and navigate to the folder you just created ```cd C:\Hackathon\Source\repos```
+4. Now you need to clone the repository using the following command ```git clone https://github.com/NCATHackathon/magical-library.git```
+5. You should now have the following folder created ```C:\Hackathon\Source\repos\magical-library```
+6. Using Visual Studio Code, open this folder. On the left side, you should have Explorer window that shows /client, /server and a few other files
+7. We need a Terminal in Visual Studio Code to continue. Click Terminal, New Terminal at the top of VS Code Menu Bar
+8. Now that we have a terminal Open in VS Code, we need to perform an install of the application by running the command ```npm install```
+9. npm install is referencing a script inside package.json called install. 
+10. Assuming you get no errors, you can now run both the client and server application using ```npm start```
+11. Once you see `Express server listening on http://localhost:3001` and `√ Compiled successfully.` in the terminal, both applications are up and running
+12. You can access the frontend server here: [http://localhost:4200/](http://localhost:4200/)
+13. You can access the backend server here: [http://localhost:3001/api/potions](http://localhost:3001/api/potions) (this is a simple GET API response)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+### TLDR:Project Setup
+1. `git clone https://github.com/NCATHackathon/magical-library.git`
+2. `npm install`
+3. `npm start` apps running on [localhost:4200 (angular)](http://localhost:4200/) and [localhost:3001 (express)](http://localhost:3001/api/potions)
 
-## Code scaffolding
+### Project Structure
+/magical-library folder is what we'll call or consider the 'root' folder of our project. The root folder contains the following files/folders:
+* /client folder - This holds the front end application which is written in AngularJS/Typescript and using the PrimeNG UI framework
+* /server folder - This holds the backend application which is written in JavaScript/Typescript using ExpressJS framework for handling API request/responses
+* package.json - This file contains root level scripts to simplify interacting with this project. Each folder (client and server) also have package.json files within them. Generally, package.json files specify what project scripts and dependencies are needed.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### Helpful Scripts
+It's important to note that scripts are executed based on the package.json file in the current active directory. So if my terminal is pointing to `PS C:\Hackathon\Source\repos\magical-library\`, when I execute ```npm start``` it will call the script named start inside ```C:\Hackathon\Source\repos\magical-library\package.json```. Likewise, if my terminal is pointing to ```PS C:\Hackathon\Source\repos\magical-library\client```, it will call the script named start inside ```C:\Hackathon\Source\repos\magical-library\client\package.json```
 
-## Build
+You can technically install and run the applications separately, which may be useful if team members are working on different pieces of the application. If you only want to run the front end application, you can:
+```cd C:\Hackathon\Source\repos\magical-library\client``` and then ```npm start```
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+# Languages / Frameworks
+The /client folder of this repository was cloned from the Sakai / PrimeNG template project. It is based on AngularJS frontend framework leveraging the PrimeNG UI Framework.
 
-## Further help
+You may want to review the following documentation:
+* [Javascript](https://devdocs.io/javascript/) - JavaScript is a versatile, high-level programming language that is one of the core technologies of the web, alongside HTML and CSS. Initially designed to make web pages interactive, JavaScript has evolved to become a powerful language used on both the client-side and server-side of web development. It enables developers to create dynamic content, control multimedia, animate images, and much more. With the advent of Node.js, JavaScript expanded its reach to server-side programming, allowing for the development of fast and scalable network applications. JavaScript's ecosystem is vast, with numerous libraries and frameworks available to streamline and enhance web development.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+* [Typescript](https://www.typescriptlang.org/docs/) - TypeScript is a superset of JavaScript developed by Microsoft that adds static typing and object-oriented features to the language. It is designed to help developers catch errors early through a type system and to make JavaScript development more efficient and robust. TypeScript code is transpiled to plain JavaScript, making it compatible with any browser, host, or operating system. This language extends JavaScript syntax, so any valid JavaScript code is also valid TypeScript code. TypeScript is widely adopted for large-scale applications due to its powerful tools for maintaining and refactoring code, leading to more readable, maintainable, and error-free codebases.
+
+* [AngularJS](https://angular.io/docs) - Angular is a popular open-source web application framework, primarily developed and maintained by Google. It's designed to help developers build dynamic, single-page web applications (SPAs) using a component-based architecture. Angular provides a robust set of tools and features, including two-way data binding, dependency injection, directives, and a comprehensive suite of testing utilities, all aimed at enabling developers to create efficient, scalable, and maintainable front-end web applications. It's written in TypeScript, offering advantages like static typing, classes, and interfaces, which can enhance code quality and readability.
+
+* [PrimeNG](https://primeng.org/installation) - PrimeNG is a collection of rich UI components for Angular applications. It's a comprehensive suite of open-source components that are designed to work seamlessly with Angular, providing developers with a vast array of widgets and UI elements to enhance their web applications. These components range from basic elements like buttons and inputs to more complex constructs like data tables, charts, and advanced menus. PrimeNG is known for its theme support, allowing developers to easily customize the look and feel of their applications. It's a popular choice among Angular developers for its ease of use, high level of customization, and professional quality of components.
+
+* [ExpressJS](https://expressjs.com/) - Express.js, often referred to as Express, is a minimalist and flexible Node.js web application framework that provides a robust set of features for building single-page, multi-page, and hybrid web applications. It's known for its performance and efficiency, making it a popular choice for backend development in the JavaScript ecosystem. Express simplifies the server creation process by providing easy-to-use tools for routing, middleware integration, and handling HTTP requests and responses. Its unopinionated nature allows developers to structure their applications as they see fit, making Express highly versatile and suitable for a wide range of projects, from simple web apps to complex RESTful APIs.
